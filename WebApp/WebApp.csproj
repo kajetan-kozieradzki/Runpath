@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <AssemblyName>Runpath.WebApp</AssemblyName>
+    <RootNamespace>Runpath.WebApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="StaticFiles\TestData\albums.json" />
+    <Content Remove="StaticFiles\TestData\photos.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="StaticFiles\TestData\albums.json" />
+    <None Include="StaticFiles\TestData\photos.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+</Project>
