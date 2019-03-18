@@ -15,7 +15,7 @@ namespace WebApp.Tests
 
         private HttpClient httpClient;
 
-        private const string baseUrl = "http://localhost:49905/api";
+        private string baseUrl;
 
         [TestInitialize]
         public void Init()
@@ -23,6 +23,7 @@ namespace WebApp.Tests
             config = new ConfigurationBuilder().AddJsonFile("appsettings.json")
                                                .Build();
 
+            baseUrl = config["ApiBaseUrl"];
             httpClient = new HttpClient();
         }
 

@@ -8,7 +8,7 @@ using System.Linq;
 namespace Logic.Tests
 {
     [TestClass]
-    public class FetcherTests
+    public class DataFetcherTests
     {
         private IDataFetcher dataFetcher;
 
